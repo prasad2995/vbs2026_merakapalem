@@ -648,7 +648,7 @@
   <div class="hero-content">
     <div class="vbs-badge" data-en="✝ VACATION BIBLE SCHOOL 2026 ✝" data-te="✝ వేసవి బైబిల్ పాఠశాల 2026 ✝">✝ VACATION BIBLE SCHOOL 2026 ✝</div>
     <br>
-    <img src="../attachments/Call%20To%20Jesus.png" alt="Theme: Call to Jesus - Matthew 19:14" style="max-width: 60%; width: 400px; height: auto; display: inline-block;">
+    <img src="./attachments/Call%20To%20Jesus.png" alt="Theme: Call to Jesus - Matthew 19:14" style="max-width: 60%; width: 400px; height: auto; display: inline-block;">
     <p class="hero-sub" data-en="🌟 Spend this summer joyfully at VBS!" data-te="ఈ వేసవి సెలవులను VBS లో ఆనందంగా గడపండి">🌟 Spend this summer joyfully at VBS!</p>
     <p class="church-name" id="siteHeroChurchName">LEF Church Merakapalem</p>
     <div class="bible-verse-hero" data-en="&ldquo;Call to me, and I will answer you.&rdquo; — Jeremiah 33:3" data-te="&ldquo;చిన్న పిల్లలను నా యొద్దకు రానియ్యండి.&rdquo; — మత్తయి 19:14">&ldquo;Call to me, and I will answer you.&rdquo; —  Jeremiah 33:3</div>
@@ -1703,7 +1703,7 @@
   import { collection, addDoc, getDocs, deleteDoc, doc, query, orderBy, serverTimestamp, updateDoc, setDoc, getDoc, writeBatch, where, documentId }
     from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
-  import { auth, db, churchDb } from "../firebase-config.js";
+  import { auth, db, churchDb } from "./firebase-config.js";
 
   const ADMIN_EMAIL  = "admin@lefmerakapalem.com";
   const VIEWER_EMAIL = "viewer@lefmerakapalem.com";
@@ -3457,7 +3457,7 @@
     }catch{
       throw new Error('Student photo could not be loaded');
     }
-    const themeImg = await loadImage('../attachments/Call%20To%20Jesus.png').catch(()=>null);
+    const themeImg = await loadImage('./attachments/Call%20To%20Jesus.png').catch(()=>null);
 
     // ── HELPERS ──
     function roundRect(px, py, pw, ph, pr, fill, stroke, lw = 2){
